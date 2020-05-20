@@ -1,0 +1,105 @@
+:root {
+  --prim-color: #ed1c24;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: #f4f4f4;
+  font-family: "Courier New", Courier, monospace;
+}
+
+#navbar ul {
+  list-style: none;
+}
+
+#navbar ul li {
+  color: #333333;
+  display: inline-block;
+  padding: 1rem;
+  position: relative;
+}
+
+#navbar ul li a {
+  color: #333333;
+  text-decoration: none;
+}
+
+/* Hide Nested ul by default */
+#navbar ul li ul {
+  display: none;
+}
+
+#navbar ul li:hover {
+  cursor: pointer;
+  background: var(--prim-color);
+  color: white;
+}
+
+#navbar ul li:hover a {
+  color: white;
+}
+
+/* Show Nested uls on hover */
+#navbar ul li:hover ul {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 200px;
+  margin-top: 1rem;
+}
+
+#navbar ul li:hover ul li {
+  display: block;
+  background: white;
+}
+
+#navbar ul li:hover ul li a {
+  color: #333333;
+}
+#navbar ul li:hover ul li:hover {
+  background: #e0e0e0;
+  color: #333333;
+}
+
+#navbar ul li:hover ul li span {
+  float: right;
+  color: white;
+  background: var(--prim-color);
+  padding: 0.2rem 0.5rem;
+  font-size: 0.8rem;
+  border-radius: 5px;
+}
+
+#showcase {
+  display: flex;
+  flex-direction: column;
+  height: 301px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 2rem;
+  background: var(--prim-color);
+  color: white;
+}
+#showcase h1 {
+  font-size: 8rem;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  #navbar ul li {
+    display: block;
+  }
+  #navbar ul li:hover ul {
+    width: 100%;
+    position: relative;
+  }
+}
