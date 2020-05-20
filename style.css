@@ -78,7 +78,6 @@ body {
 
 #showcase {
   display: flex;
-  flex-direction: column;
   height: 301px;
   align-items: center;
   justify-content: center;
@@ -86,12 +85,18 @@ body {
   padding: 0 2rem;
   background: var(--prim-color);
   color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 #showcase h1 {
+  margin: auto;
   font-size: 8rem;
   font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
   font-style: italic;
+  vertical-align: center;
 }
 
 @media (max-width: 600px) {
